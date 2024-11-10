@@ -3,24 +3,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/spil.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Spil</h1>
+    <header>
+      <div class="menu">
+        <a href="spil.html">Game</a>
+        <a href="grafik.html">Graphics</a>
+        <a href="assets.html">Assets</a>
+        <a href="teknik.html">Technique</a>
+      </div>
+    </header>
+    <main>
+      <h1>Spil</h1>
 
-    <div id="screen">
+      <div id="screen"></div>
       <div id="game">
         <div id="game_background"></div>
-        <div id="game_elements"></div>
+
+        <div id="game_elements">
+          <div id="worm_container">
+            <div id="worm_sprite" class="falling"></div>
+          </div>
+          <div id="spider_container">
+            <div id="spider_sprite"></div>
+          </div>
+          <div id="poison_container">
+            <div id="poison_sprite"></div>
+          </div>
+          <div id="espresso_container">
+            <div id="espresso_sprite" class="falling"></div>
+          </div>
+          <div id="vodka_container">
+            <div id="vodka_sprite"></div>
+          </div>
+          <div id="kahlua_container">
+            <div id="kahlua_sprite"></div>
+          </div>
+          <div id="icecube_container">
+            <div id="icecube_sprite"></div>
+          </div>
+          <div id="coffeebean_container">
+            <div id="coffeebean_sprite"></div>
+          </div>
+        </div>
         <div id="game_foreground"></div>
         <div id="game_ui">
           <div id="score_board"></div>
           <div id="life_board"></div>
           <div id="time_board"></div>
         </div>
+        <div id="start"></div>
+        <div id="game_over"></div>
+        <div id="level_complete"></div>
       </div>
-      <div id="start"></div>
-      <div id="game_over"></div>
-      <div id="level_complete"></div>
-    </div>
+    </main>
   </body>
 </html>

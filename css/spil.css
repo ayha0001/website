@@ -45,6 +45,9 @@
   position: absolute;
   top: 0;
   left: 0;
+  background-image: url(../svg/spilskaerm.svg);
+  background-size: cover;
+  margin-top: 50px;
 }
 
 #game_elements {
@@ -71,4 +74,31 @@
   top: 0;
   left: 0;
   pointer-events: none;
+}
+#espresso_container {
+ width: 50%;
+  aspect-ratio: 1/1
+  position: absolute;
+}
+
+#espresso_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(../svg/espresso.svg);
+  background-size: cover;
+}
+
+.falling {
+  animation-name: falling_kf;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes falling_kf {
+  from {
+    translate: 0 -100%;
+  }
+  to {
+    translate: 0 100%;
+  }
 }
