@@ -1,0 +1,25 @@
+.levelcomplete {
+  display: grid;
+  grid-column: 2 / span 1;
+}
+
+.screens article {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Create 2 equal-width columns */
+  grid-template-rows: auto auto; /* Create 2 rows (auto height based on content) */
+  gap: 20px; /* Space between items */
+}
+
+.screens .startscreen,
+.screens .levelcomplete {
+  grid-column: span 1; /* Each takes one column */
+}
+
+.screens .gameover,
+.screens .bsckground {
+  grid-column: span 1; /* Each takes one column */
+}
+
+.screens h3 {
+  font-weight: bold;
+}

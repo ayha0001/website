@@ -76,15 +76,30 @@
   pointer-events: none;
 }
 #espresso_container {
- width: 50%;
-  aspect-ratio: 1/1
   position: absolute;
+  width: 5%;
+  aspect-ratio: 115/122;
+  left: 50%;
 }
 
 #espresso_sprite {
   width: 100%;
   height: 100%;
   background-image: url(../svg/espresso.svg);
+  background-size: cover;
+}
+
+#worm_container {
+  position: absolute;
+  width: 5%;
+  aspect-ratio: 145/178;
+  left: 60%;
+}
+
+#worm_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(../svg/orm.svg);
   background-size: cover;
 }
 
@@ -99,6 +114,40 @@
     translate: 0 -100%;
   }
   to {
-    translate: 0 100%;
+    translate: 0 900%;
+  }
+}
+
+.spin {
+  animation-name: spin_kf;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  display: inline-block;
+}
+
+@keyframes spin_kf {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation-name: spin_kf;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin_kf {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
