@@ -2,6 +2,7 @@
   width: 100%;
   aspect-ratio: 16/9;
   position: relative;
+  overflow: hidden;
 }
 
 #game {
@@ -47,14 +48,13 @@
   left: 0;
   background-image: url(../svg/spilskaerm.svg);
   background-size: cover;
-  margin-top: 50px;
 }
 
 #game_elements {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
+  top: -10%;
   left: 0;
 }
 
@@ -75,11 +75,31 @@
   left: 0;
   pointer-events: none;
 }
+
+.pos1 {
+  left: 50%;
+}
+
+.pos2 {
+  left: 60%;
+}
+
+.pos3 {
+  left: 70%;
+}
+
+.pos4 {
+  left: 80%;
+}
+
+.pos5 {
+  left: 90%;
+}
+
 #espresso_container {
   position: absolute;
   width: 5%;
   aspect-ratio: 115/122;
-  left: 50%;
 }
 
 #espresso_sprite {
@@ -88,12 +108,68 @@
   background-image: url(../svg/espresso.svg);
   background-size: cover;
 }
+/*
+#vodka_container {
+  position: absolute;
+  width: 3%;
+  aspect-ratio: 112/357;
+  left: 50%;
+}
+
+#vodka_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(../svg/vodka.svg);
+  background-size: cover;
+}
+
+#kahlua_container {
+  position: absolute;
+  width: 2.5%;
+  aspect-ratio: 91/335;
+  left: 50%;
+}
+
+#kahlua_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(../svg/kahlua.png);
+  background-size: cover;
+}
+
+#icecube_container {
+  position: absolute;
+  width: 5%;
+  aspect-ratio: 129/120;
+  left: 50%;
+}
+
+#icecube_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(../svg/isterning.svg);
+  background-size: cover;
+}
+
+#coffeebean_container {
+  position: absolute;
+  width: 5%;
+  aspect-ratio: 139/125;
+  left: 50%;
+}
+
+#coffeebean_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(../svg/kaffebonne.svg);
+  background-size: cover;
+}
+   */
 
 #worm_container {
   position: absolute;
-  width: 5%;
-  aspect-ratio: 145/178;
-  left: 60%;
+  width: 6%;
+  aspect-ratio: 245/178;
 }
 
 #worm_sprite {
@@ -102,6 +178,20 @@
   background-image: url(../svg/orm.svg);
   background-size: cover;
 }
+
+.falling {
+  animation-name: falling_kf;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes falling_kf {
+  100% {
+    translate: 0 1500%;
+  }
+}
+
+/*
 
 .falling {
   animation-name: falling_kf;
@@ -136,6 +226,7 @@
   }
 }
 
+
 .spin {
   animation-name: spin_kf;
   animation-duration: 2s;
@@ -150,4 +241,59 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.spin {
+  animation-name: spin_kf;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+   */
+
+.spin {
+  animation-name: spin_kf;
+  animation-duration: 0.6s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+@keyframes spin_kf {
+  100% {
+    rotate: 600deg;
+    scale: 0;
+  }
+}
+
+.shrink {
+  animation-name: shrink_kf;
+  animation-duration: 0.6s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+@keyframes shrink_kf {
+  20% {
+    scale: 1.5;
+  }
+  30% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
+  }
+}
+
+.freeze {
+  animation-play-state: paused;
 }
