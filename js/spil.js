@@ -69,10 +69,9 @@ function ingredientReset() {
 
   //fjern alt fra element
   espressoElement.classList = "";
-  espressoElement.offsetleft;
-
+  espressoElement.offsetLeft;
   //ny position
-  espressoElement.classList.add("pos5");
+  espressoElement.classList.add("pos7");
   espressoElement.classList.add("falling");
 
   //lyt efter klik
@@ -105,10 +104,10 @@ function grossReset() {
 
   //fjern alt fra element
   wormElement.classList = "";
-  wormElement.offsetleft;
+  wormElement.offsetLeft;
 
   //ny position
-  wormElement.classList.add("pos2");
+  wormElement.classList.add("pos9");
   wormElement.classList.add("falling");
 
   //lyt efter klik
