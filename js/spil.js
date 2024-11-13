@@ -1,99 +1,77 @@
 window.addEventListener("load", sidenVises);
 
+//Global konstanter
+const espressoElement = document.querySelector("#espresso_container");
+const wormElement = document.querySelector("#worm_container");
+
 let score;
+let lives;
 
 function sidenVises() {
   console.log("sidenVises");
   //skjul andre skærme
-  //vis start skærm
-  //click på play
+  //vis startskærm
   startGame();
 }
 
+//klik på play
 function startGame() {
   console.log("startGame");
 
-  //nulstil point og liv
+  //nulstill point og lives
   score = 0;
   console.log(score);
   document.querySelector("#point").textContent = "" + score;
 
-  //skriv point og liv ud
-  //start timer -animation
-  //random position og delay
+  liv = 3;
+  document.querySelector("#lives").textContent = liv;
 
-  //start falling -animation på elementer
-  document.querySelector("#espresso_container").classList.add("falling");
-  document.querySelector("#espresso_container").classList.add("pos1");
+  //giv position og fald animation
+  espressoElement.classList.add("falling");
+  espressoElement.classList.add("pos1");
 
-  document.querySelector("#worm_container").classList.add("falling");
-  document.querySelector("#worm_container").classList.add("pos4");
+  wormElement.classList.add("falling");
+  wormElement.classList.add("pos4");
 
-  //lyt efter falling animationer er kørt en gang
-  document.querySelector("#espresso_container").addEventListener("animationiteration", ingredientReset);
-  document.querySelector("#worm_container").addEventListener("animationiteration", grossReset);
+  //start timer animation
+  //random position og random delay
+
+  //lyt efter at animation er kørt en gang
+  espressoElement.addEventListener("animationiteration", ingredientReset);
+
+  wormElement.addEventListener("animationiteration", grossReset);
 
   //lyt efter klik
-  document.querySelector("#espresso_container").addEventListener("mousedown", clickIngredient);
-  document.querySelector("#worm_container").addEventListener("mousedown", clickGross);
+  espressoElement.addEventListener("mousedown", clickIngredient);
+
+  wormElement.addEventListener("mousedown", clickGross);
 }
 
 function clickIngredient() {
   console.log("clickIngredient");
 
-  //plus 1 point
+  //få 1 point
   score++;
   document.querySelector("#point").textContent = "" + score;
-  //ryd op så man ikke kan klikke på den samme flere gange
 
-  //frys
-  document.querySelector("#worm_container").classList.add("freeze");
+  //afspil lyd
+  espressoElement.classList.add("freeze");
   document.querySelector("#espresso_sprite").classList.add("spin");
 
-  //lyt efter animation er færdig
-  document.querySelector("#espresso_container").addEventListener("animationend", ingredientReset);
+  espressoElement.addEventListener("animationend", ingredientReset);
 }
 
 function ingredientReset() {
   console.log("ingredientReset");
 
-  //fjern alt på container og sprite
-  document.querySelector("#espresso_container").classList = "";
-  document.querySelector("#espresso_sprite").classList = "";
-  document.querySelector("#espresso_container").removeEventListener("mousedown", clickIngredient);
+  //fjern alt fra element
+  espressoElement.classList = "";
+  espressoElement.offsetleft;
 
-  //giv en random position til container og fald animationer
-  document.querySelector("#espresso_container").classList.add("pos3");
-  document.querySelector("#espresso_container").classList.add("falling");
-
-  //lyt efter klik
-  document.querySelector("#espresso_container").addEventListener("mousedown", clickIngredient);
-}
-
-function clickGross() {
-  console.log("clickGross");
-
-  //minus 1 liv
-
-  //frys og forsvind animation
-  document.querySelector("#worm_container").classList.add("freeze");
-  document.querySelector("#worm_sprite").classList.add("shrink");
-
-  //lyt efter forsvind-animation er færdig
-  document.querySelector("#worm_container").addEventListener("animationend", grossReset);
-}
-
-function grossReset() {
-  console.log("grossReset");
-  //fjern alt på container og sprite
-  document.querySelector("#worm_container").classList = "";
-  document.querySelector("#worm_sprite").classList = "";
-  document.querySelector("#worm_container").removeEventListener("mousedown", clickGross);
-
-  //giv en random position til container og fald animationer
-  document.querySelector("#worm_container").classList.add("pos3");
-  document.querySelector("#worm_container").classList.add("falling");
+  //ny position
+  espressoElement.classList.add("pos5");
+  espressoElement.classList.add("falling");
 
   //lyt efter klik
-  document.querySelector("#espresso_container").addEventListener("mousedown", clickIngredient);
+  espressoElement.addEventListener("mousedown", clickIngredient);
 }

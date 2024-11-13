@@ -100,6 +100,8 @@
   position: absolute;
   width: 5%;
   aspect-ratio: 115/122;
+  z-index: 50;
+  pointer-events: auto;
 }
 
 #espresso_sprite {
@@ -183,11 +185,12 @@
   animation-name: falling_kf;
   animation-duration: 5s;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
 }
 @keyframes falling_kf {
   100% {
-    translate: 0 1500%;
+    translate: 0 1200%;
   }
 }
 
@@ -265,14 +268,19 @@
 
 .spin {
   animation-name: spin_kf;
-  animation-duration: 0.6s;
+  animation-duration: 0.8s;
   animation-iteration-count: 1;
-  animation-timing-function: linear;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
 }
 @keyframes spin_kf {
-  100% {
-    rotate: 600deg;
+  from {
+    scale: 100%;
+  }
+
+  to {
     scale: 0;
+    rotate: -180deg;
   }
 }
 
