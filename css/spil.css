@@ -77,23 +77,43 @@
 }
 
 .pos1 {
-  left: 50%;
+  left: 45%;
 }
 
 .pos2 {
-  left: 60%;
+  left: 48%;
 }
 
 .pos3 {
-  left: 70%;
+  left: 52%;
 }
 
 .pos4 {
-  left: 80%;
+  left: 56%;
 }
 
 .pos5 {
-  left: 90%;
+  left: 59%;
+}
+
+.pos6 {
+  left: 63%;
+}
+
+.pos7 {
+  left: 66%;
+}
+
+.pos8 {
+  left: 70%;
+}
+
+.pos9 {
+  left: 74%;
+}
+
+.pos10 {
+  left: 80%;
 }
 
 #espresso_container {
@@ -101,7 +121,6 @@
   width: 5%;
   aspect-ratio: 115/122;
   z-index: 50;
-  pointer-events: auto;
 }
 
 #espresso_sprite {
@@ -286,7 +305,7 @@
 
 .shrink {
   animation-name: shrink_kf;
-  animation-duration: 0.6s;
+  animation-duration: 0.5s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
 }

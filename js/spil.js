@@ -55,9 +55,12 @@ function clickIngredient() {
   document.querySelector("#point").textContent = "" + score;
 
   //afspil lyd
+
+  //tilføj forsvind/spin ud animation
   espressoElement.classList.add("freeze");
   document.querySelector("#espresso_sprite").classList.add("spin");
 
+  //reset når animation er slut
   espressoElement.addEventListener("animationend", ingredientReset);
 }
 
@@ -74,4 +77,42 @@ function ingredientReset() {
 
   //lyt efter klik
   espressoElement.addEventListener("mousedown", clickIngredient);
+
+  //reset fald animation
+}
+
+function clickGross() {
+  console.log("clickGross");
+
+  //mist 1 liv
+  liv--;
+  document.querySelector("#lives").textContent = lives;
+
+  //afspil lys
+
+  //tilføj forsvind/mindsk animation
+  wormElement.classList.add("freeze");
+  document.querySelector("#worm_sprite").classList.add("shrink");
+
+  //reset når animation er slut
+  wormElement.addEventListener("animationend", grossReset);
+
+  //fjern alt fra element
+}
+
+function grossReset() {
+  console.log("grossReset");
+
+  //fjern alt fra element
+  wormElement.classList = "";
+  wormElement.offsetleft;
+
+  //ny position
+  wormElement.classList.add("pos2");
+  wormElement.classList.add("falling");
+
+  //lyt efter klik
+  wormElement.addEventListener("mousedown", clickGross);
+
+  //reset fald animation
 }
