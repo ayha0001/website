@@ -27,8 +27,8 @@ function startGame() {
   console.log(score);
   document.querySelector("#point").textContent = "" + score;
 
-  liv = 3;
-  document.querySelector("#lives").textContent = liv;
+  lives = 3;
+  document.querySelector("#lives").textContent = lives;
 
   //giv position og fald animation
   //espressoElement.classList.add("falling");
@@ -64,7 +64,7 @@ function clickIngredient() {
 
   //tilføj forsvind/spin ud animation
   espressoElement.classList.add("freeze");
-  document.querySelector("#espresso_sprite").classList.add("spin");
+  espressoElement.firstElementChild.classList.add("spin");
 
   //reset når animation er slut
   espressoElement.addEventListener("animationend", ingredientReset);
@@ -74,7 +74,7 @@ function ingredientReset() {
   console.log("ingredientReset");
 
   //fjern alt fra element
-  document.querySelector("#espresso_sprite").classList.remove("spin");
+  espressoElement.firstElementChild.classList.remove("spin");
   espressoElement.classList = "";
   espressoElement.offsetLeft;
 
@@ -91,14 +91,14 @@ function clickGross() {
   console.log("clickGross");
 
   //mist 1 liv
-  liv--;
+  lives--;
   document.querySelector("#lives").textContent = lives;
 
   //afspil lys
 
   //tilføj forsvind/mindsk animation
   wormElement.classList.add("freeze");
-  document.querySelector("#worm_sprite").classList.add("shrink");
+  wormElement.firstElementChild.classList.add("shrink");
 
   //reset når animation er slut
   wormElement.addEventListener("animationend", grossReset);
@@ -110,7 +110,7 @@ function grossReset() {
   console.log("grossReset");
 
   //fjern alt fra element
-  document.querySelector("#worm_sprite").classList.remove("shrink");
+  wormElement.firstElementChild.classList.remove("shrink");
   wormElement.classList = "";
   wormElement.offsetLeft;
 
