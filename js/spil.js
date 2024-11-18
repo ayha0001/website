@@ -7,6 +7,10 @@ const wormElement = document.querySelector("#worm_container");
 let score;
 let lives;
 
+function nytRandom(max) {
+  return Math.floor(Math.random() * max) + 1;
+}
+
 function sidenVises() {
   console.log("sidenVises");
   //skjul andre skærme
@@ -27,14 +31,16 @@ function startGame() {
   document.querySelector("#lives").textContent = liv;
 
   //giv position og fald animation
-  espressoElement.classList.add("falling");
-  espressoElement.classList.add("pos1");
+  //espressoElement.classList.add("falling");
+  //espressoElement.classList.add("pos1");
 
-  wormElement.classList.add("falling");
-  wormElement.classList.add("pos4");
+  //wormElement.classList.add("falling");
+  //wormElement.classList.add("pos4");
 
   //start timer animation
   //random position og random delay
+  espressoElement.classList.add("pos" + nytRandom(10), "falling");
+  wormElement.classList.add("pos" + nytRandom(10), "falling");
 
   //lyt efter at animation er kørt en gang
   espressoElement.addEventListener("animationiteration", ingredientReset);
@@ -68,11 +74,12 @@ function ingredientReset() {
   console.log("ingredientReset");
 
   //fjern alt fra element
+  document.querySelector("#espresso_sprite").classList.remove("spin");
   espressoElement.classList = "";
   espressoElement.offsetLeft;
+
   //ny position
-  espressoElement.classList.add("pos7");
-  espressoElement.classList.add("falling");
+  espressoElement.classList.add("pos" + nytRandom(10), "falling");
 
   //lyt efter klik
   espressoElement.addEventListener("mousedown", clickIngredient);
@@ -103,12 +110,12 @@ function grossReset() {
   console.log("grossReset");
 
   //fjern alt fra element
+  document.querySelector("#worm_sprite").classList.remove("shrink");
   wormElement.classList = "";
   wormElement.offsetLeft;
 
   //ny position
-  wormElement.classList.add("pos9");
-  wormElement.classList.add("falling");
+  wormElement.classList.add("pos" + nytRandom(10), "falling");
 
   //lyt efter klik
   wormElement.addEventListener("mousedown", clickGross);

@@ -81,39 +81,39 @@
 }
 
 .pos2 {
-  left: 48%;
+  left: 50%;
 }
 
 .pos3 {
-  left: 52%;
+  left: 55%;
 }
 
 .pos4 {
-  left: 56%;
+  left: 60%;
 }
 
 .pos5 {
-  left: 59%;
+  left: 65%;
 }
 
 .pos6 {
-  left: 63%;
-}
-
-.pos7 {
-  left: 66%;
-}
-
-.pos8 {
   left: 70%;
 }
 
+.pos7 {
+  left: 75%;
+}
+
+.pos8 {
+  left: 80%;
+}
+
 .pos9 {
-  left: 74%;
+  left: 85%;
 }
 
 .pos10 {
-  left: 80%;
+  left: 90%;
 }
 
 #espresso_container {
@@ -209,7 +209,7 @@
 }
 @keyframes falling_kf {
   100% {
-    translate: 0 1200%;
+    translate: 0 1500%;
   }
 }
 
