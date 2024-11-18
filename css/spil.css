@@ -3,6 +3,8 @@
   aspect-ratio: 16/9;
   position: relative;
   overflow: hidden;
+  container-type: inline-size;
+  font-size: 2cqw;
 }
 
 #game {
@@ -19,7 +21,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
+  /*background-image: url(../svg/forside.svg);*/
 }
 
 #game_over {
@@ -28,7 +30,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
+  background-image: url(../svg/gameover.svg);
 }
 
 #level_complete {
@@ -37,7 +39,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
+  background-image: url(../svg/levelcomplete.svg);
 }
 
 #game_background {
@@ -74,6 +76,58 @@
   top: 0;
   left: 0;
   pointer-events: none;
+}
+
+#time_container {
+  width: 12%;
+  aspect-ratio: 5/1;
+  border: solid;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
+
+#time_sprite {
+  width: 100%;
+  height: 100%;
+  transform-origin: bottom;
+}
+
+.time {
+  animation-name: time_kf;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes time_kf {
+  from {
+    background-color: red;
+    width: 100%;
+  }
+  to {
+    background-color: blue;
+    width: 0;
+  }
+}
+
+#heart {
+  width: 3%;
+  aspect-ratio: 182/171;
+  position: absolute;
+  background-image: url(../svg/hjerte.svg);
+  top: 7.5%;
+  left: 2%;
+}
+
+#lives {
+  position: absolute;
+  top: 7.1%;
+  left: 5.5%;
+  font-size: 2.8cqw;
+}
+
+#score {
 }
 
 .pos1 {
@@ -275,4 +329,8 @@
 
 .freeze {
   animation-play-state: paused;
+}
+
+.hide {
+  display: none;
 }
