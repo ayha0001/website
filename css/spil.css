@@ -102,11 +102,11 @@
 
 @keyframes time_kf {
   from {
-    background-color: red;
+    background-color: #f788a2;
     width: 100%;
   }
   to {
-    background-color: blue;
+    background-color: #891d1a;
     width: 0;
   }
 }
@@ -184,23 +184,23 @@
 }
 
 .delay2 {
-  animation-delay: 0.5s;
-}
-
-.delay3 {
   animation-delay: 0.9s;
 }
 
+.delay3 {
+  animation-delay: 1.5s;
+}
+
 .delay4 {
-  animation-delay: 1.3s;
+  animation-delay: 2.3s;
 }
 
 .delay5 {
-  animation-delay: 1.7s;
+  animation-delay: 2.9s;
 }
 
 .delay6 {
-  animation-delay: 2.2s;
+  animation-delay: 3s;
 }
 
 #espresso_container {
@@ -216,12 +216,12 @@
   background-image: url(../svg/espresso.svg);
   background-size: cover;
 }
-/*
+
 #vodka_container {
   position: absolute;
   width: 3%;
   aspect-ratio: 112/357;
-  left: 50%;
+  top: -10%;
 }
 
 #vodka_sprite {
@@ -235,7 +235,7 @@
   position: absolute;
   width: 2.5%;
   aspect-ratio: 91/335;
-  left: 50%;
+  top: -10%;
 }
 
 #kahlua_sprite {
@@ -249,7 +249,6 @@
   position: absolute;
   width: 5%;
   aspect-ratio: 129/120;
-  left: 50%;
 }
 
 #icecube_sprite {
@@ -263,7 +262,6 @@
   position: absolute;
   width: 5%;
   aspect-ratio: 139/125;
-  left: 50%;
 }
 
 #coffeebean_sprite {
@@ -272,7 +270,6 @@
   background-image: url(../svg/kaffebonne.svg);
   background-size: cover;
 }
-   */
 
 #worm_container {
   position: absolute;
@@ -287,9 +284,36 @@
   background-size: cover;
 }
 
+#spider_container {
+  position: absolute;
+  width: 7%;
+  aspect-ratio: 347/244;
+}
+
+#spider_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(../svg/edderkop.svg);
+  background-size: cover;
+}
+
+#poison_container {
+  position: absolute;
+  width: 5%;
+  aspect-ratio: 183/268;
+  top: -10%;
+}
+
+#poison_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(../svg/gift.svg);
+  background-size: cover;
+}
+
 .falling {
   animation-name: falling_kf;
-  animation-duration: 5s;
+  animation-duration: 6s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
