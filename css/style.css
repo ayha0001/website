@@ -31,3 +31,12 @@ header {
 main {
   background-color: whitesmoke;
 }
+
+.playbutton {
+  position: absolute;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 72px 192px;
+  top: 49.3%;
+  left: 8.1%;
+}
