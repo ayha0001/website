@@ -128,6 +128,15 @@
 }
 
 #score {
+  position: absolute;
+  top: 13.1%;
+  left: 2%;
+}
+
+#point {
+  position: absolute;
+  top: 13.1%;
+  left: 8.2%;
 }
 
 .pos1 {
