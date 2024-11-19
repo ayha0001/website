@@ -24,7 +24,8 @@ function sidenVises() {
   document.querySelector("#game_over").classList.add("hide");
   document.querySelector("#level_complete").classList.add("hide");
   //vis startskærm
-  startGame();
+  document.querySelector("#start").classList.remove("hide");
+  document.querySelector("#start").addEventListener("click", startGame);
 }
 
 //klik på play

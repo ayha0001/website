@@ -21,7 +21,42 @@
   position: absolute;
   top: 0;
   left: 0;
-  /*background-image: url(../svg/forside.svg);*/
+  background-image: url(../svg/forside.svg);
+  cursor: pointer;
+}
+
+.playgameover {
+  position: absolute;
+  font-family: varela round, sans-serif;
+  font-size: 2cqw;
+  font-weight: 700;
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 40.5px 75px;
+  top: 48%;
+  left: 52.8%;
+}
+
+.game_over a:hover {
+  text-decoration: underline;
+}
+
+.playcomplete {
+  position: absolute;
+  font-family: varela round, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 40.5px 75px;
+  top: 54.5%;
+  left: 55.7%;
+}
+
+.playcomplete a:hover {
+  text-decoration: underline;
 }
 
 #game_over {
@@ -313,9 +348,9 @@
 
 .falling {
   animation-name: falling_kf;
-  animation-duration: 6s;
+  animation-duration: 5.5s;
   animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-out;
   animation-fill-mode: both;
 }
 @keyframes falling_kf {
