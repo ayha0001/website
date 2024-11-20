@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+header {
+  position: relative;
+  background-color: #4e5e98;
+  padding: 25px 42px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-family: open sans, sans-serif;
+  font-size: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+main {
+  background-color: #fdf0e3;
+}
+
+.playbutton {
+  position: absolute;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 72px 192px;
+  top: 49.3%;
+  left: 8.1%;
+}

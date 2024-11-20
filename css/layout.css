@@ -1,25 +1,100 @@
-.levelcomplete {
-  display: grid;
-  grid-column: 2 / span 1;
+@media (min-width: 1000px) {
+  .screens {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 30px;
+  }
+
+  .screens .startscreen,
+  .screens .levelcomplete {
+    grid-column: span 1;
+  }
+
+  .screens .gameover,
+  .screens .background {
+    grid-column: span 1;
+  }
+
+  .goodelements {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 10%;
+  }
+
+  .goodelements img {
+    max-height: 300px;
+    min-width: auto;
+  }
+
+  .badelements {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 10%;
+  }
+
+  .badelements img {
+    max-height: 230px;
+    min-width: auto;
+  }
+
+  .grid-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    align-items: end;
+    margin-bottom: 8%;
+  }
 }
 
-.screens article {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Create 2 equal-width columns */
-  grid-template-rows: auto auto; /* Create 2 rows (auto height based on content) */
-  gap: 20px; /* Space between items */
-}
+@media (max-width: 1000px) {
+  .screens {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin: 4% 0 10%;
+  }
 
-.screens .startscreen,
-.screens .levelcomplete {
-  grid-column: span 1; /* Each takes one column */
-}
+  .goodelements {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    margin: 4% 0 10%;
+  }
 
-.screens .gameover,
-.screens .bsckground {
-  grid-column: span 1; /* Each takes one column */
-}
+  .goodelements img {
+    max-width: 42%;
+  }
 
-.screens h3 {
-  font-weight: bold;
+  .badelements {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin: 4% 0 15%;
+  }
+
+  .badelements img {
+    max-width: 42%;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin-bottom: 15%;
+  }
+
+  .grid_1-1 img {
+    max-width: 60%;
+  }
 }

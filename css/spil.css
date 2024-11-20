@@ -261,7 +261,7 @@
 #kahlua_sprite {
   width: 100%;
   height: 100%;
-  background-image: url(../svg/kahlua.png);
+  background-image: url(../svg/kahlua.svg);
   background-size: cover;
 }
 

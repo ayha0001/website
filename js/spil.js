@@ -11,6 +11,14 @@ const wormElement = document.querySelector("#worm_container");
 const spiderElement = document.querySelector("#spider_container");
 const poisonElement = document.querySelector("#poison_container");
 
+//Lyd-objekter
+const goodSound = new Audio("lyde/yay.mp3");
+const badSound = new Audio("lyde/ew.mp3");
+const backgroundMusic = new Audio("lyde/baggrundsmusik.mp3");
+backgroundMusic.loop = true;
+backgroundMusic.volume = 0.2;
+
+//Point og liv
 let point;
 let lives;
 
@@ -37,12 +45,14 @@ function startGame() {
   console.log(point);
   document.querySelector("#point").textContent = "" + point;
 
+  //afspil baggrundsmusik
+  backgroundMusic.play();
+
   lives = 3;
   document.querySelector("#lives").textContent = lives;
   document.querySelector("#time_sprite").classList.add("time");
   document.querySelector("#time_container").addEventListener("animationend", stopGame);
 
-  //start timer animation
   //random position og random delay
   espressoElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(6), "falling");
   vodkaElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(6), "falling");
@@ -92,6 +102,7 @@ function clickIngredient() {
   document.querySelector("#point").textContent = "" + point;
 
   //afspil lyd
+  goodSound.play();
 
   //tilføj forsvind/spin ud animation
   this.classList.add("freeze");
@@ -126,6 +137,7 @@ function clickGross() {
   document.querySelector("#lives").textContent = lives;
 
   //afspil lys
+  badSound.play();
 
   //tilføj forsvind/mindsk animation
   this.classList.add("freeze");

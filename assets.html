@@ -3,9 +3,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assets</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/header.css" />
   </head>
   <body>
     <header>
@@ -22,41 +29,59 @@
     <main>
       <h1>Assets</h1>
       <h2>Screens</h2>
-      <div class="screens">
-        <article>
-          <div class="startscreen">
-            <h3>Startscreen</h3>
-            <img src="svg/forside.svg" alt="Startscreen" />
-          </div>
-          <div class="bsckground">
-            <h3>Background</h3>
-            <img src="svg/spilskaerm.svg" alt="Game background" />
-          </div>
-          <div class="gameover">
-            <h3>Game over</h3>
-            <img src="svg/gameover.svg" alt="Game over" />
-          </div>
-          <div class="levelcomplete">
-            <h3>Level Complete</h3>
-            <img src="svg/levelcomplete.svg" alt="Level complete" />
-          </div>
-        </article>
-      </div>
+
+      <article class="screens">
+        <div class="startscreen">
+          <h3>Startscreen</h3>
+          <img src="svg/forside.svg" alt="Startscreen" />
+        </div>
+        <div class="background">
+          <h3>Background</h3>
+          <img src="svg/spilskaerm.svg" alt="Game background" />
+        </div>
+        <div class="gameover">
+          <h3>Game over</h3>
+          <img src="svg/gameover.svg" alt="Game over" />
+        </div>
+        <div class="levelcomplete">
+          <h3>Level Complete</h3>
+          <img src="svg/levelcomplete.svg" alt="Level complete" />
+        </div>
+      </article>
+
       <h2>Game elements</h2>
-      <article>
-        <h3>Good game elements</h3>
+
+      <h3>Good game elements</h3>
+      <article class="goodelements">
         <img src="svg/espresso.svg" alt="Espresso" />
         <img src="svg/isterning.svg" alt="Icecube" />
         <img src="svg/kaffebonne.svg" alt="Coffee bean" />
-        <img src="svg/kahlua.png" alt="Coffee liquor" />
-        <img src="svg/vodka.svg" alt="" />
-        <h3>Bad elements</h3>
+        <img src="svg/kahlua.svg" alt="Coffee liquor" class="tall" />
+        <img src="svg/vodka.svg" alt="Vodka" class="tall" />
+      </article>
+
+      <h3>Bad elements</h3>
+      <article class="badelements">
         <img src="svg/edderkop.svg" alt="Spider" />
         <img src="svg/orm.svg" alt="Worm" />
         <img src="svg/gift.svg" alt="Poison" />
       </article>
-      <h2>UI elementer</h2>
-      <article><img src="" alt="" /></article>
+
+      <div class="uielements">
+        <h2>UI elementer</h2>
+        <h3>Time</h3>
+        <article class="grid_1-1">
+          <img src="svg/timefull.svg" alt="Fuld tids-element" />
+          <img src="svg/timeend.svg" alt="Slut tids-element" />
+        </article>
+        <h3>Lives</h3>
+        <img src="svg/hjerte.svg" alt="Hjerte for liv" class="heart" />
+        <h3>Buttons</h3>
+        <article class="grid_1-1">
+          <img src="svg/play.svg" alt="Spil knap" />
+          <img src="svg/playagain.svg" alt="Spil igen knap" />
+        </article>
+      </div>
       <h2>Sounds</h2>
     </main>
   </body>

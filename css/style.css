@@ -4,39 +4,85 @@
   box-sizing: border-box;
 }
 
-header {
-  position: relative;
-  background-color: whitesmoke;
-  padding: 25px 42px;
+img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
+/* font-styling*/
+h1 {
+  font-family: libre bodoni;
+  color: #343437;
+  padding-top: 3%;
+}
+
+h2 {
+  font-family: open sans, sans sans-serif;
+  color: #343437;
+}
+
+h3 {
   font-family: open sans, sans-serif;
-  font-size: 30px;
+  color: #343437;
+  padding-bottom: 1.5%;
+  font-weight: 400;
 }
 
-.menu a {
-  text-decoration: none;
-  color: #42210b;
+p {
+  font-family: open sans, sans-serif;
+  color: #343437;
+  font-size: 1rem;
+  line-height: 1.8rem;
+  padding-bottom: 1.5%;
 }
 
-.menu a:hover {
-  text-decoration: underline;
+.screens {
+  padding-bottom: 5%;
 }
 
-main {
-  background-color: whitesmoke;
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.1rem;
+    padding: 3% 0 1%;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 2% 15%;
+  }
+
+  .heart {
+    width: 200px;
+    margin-bottom: 8%;
+  }
 }
 
-.playbutton {
-  position: absolute;
-  background-color: transparent;
-  text-decoration: none;
-  padding: 72px 192px;
-  top: 49.3%;
-  left: 8.1%;
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    padding: 7% 0 1%;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  main {
+    padding: 0 5%;
+  }
+
+  .heart {
+    width: 40%;
+    margin-bottom: 8%;
+  }
 }
