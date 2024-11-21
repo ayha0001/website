@@ -54,15 +54,15 @@ function startGame() {
   document.querySelector("#time_container").addEventListener("animationend", stopGame);
 
   //random position og random delay
-  espressoElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(6), "falling");
-  vodkaElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(6), "falling");
-  kahluaElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(6), "falling");
-  icecubeElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(6), "falling");
-  coffeebeanElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(6), "falling");
+  espressoElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(5), "falling");
+  vodkaElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(5), "falling");
+  kahluaElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(5), "falling");
+  icecubeElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(5), "falling");
+  coffeebeanElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(5), "falling");
 
-  wormElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(6), "falling");
-  spiderElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(6), "falling");
-  poisonElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(6), "falling");
+  wormElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(5), "falling");
+  spiderElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(5), "falling");
+  poisonElement.classList.add("pos" + nytRandom(10), "delay" + nytRandom(5), "falling");
 
   //lyt efter at animation er kørt en gang
   espressoElement.addEventListener("animationiteration", ingredientReset);
@@ -121,7 +121,7 @@ function ingredientReset() {
   this.offsetLeft;
 
   //ny position
-  this.classList.add("pos" + nytRandom(10), "delay" + nytRandom(6), "falling");
+  this.classList.add("pos" + nytRandom(10), "delay" + nytRandom(5), "falling");
 
   //lyt efter klik
   thist.addEventListener("mousedown", clickIngredient);
@@ -162,7 +162,7 @@ function grossReset() {
   this.offsetLeft;
 
   //ny position
-  this.classList.add("pos" + nytRandom(10), "delay" + nytRandom(6), "falling");
+  this.classList.add("pos" + nytRandom(10), "delay" + nytRandom(5), "falling");
 
   //lyt efter klik
   this.addEventListener("mousedown", clickGross);

@@ -212,15 +212,11 @@
 }
 
 .delay4 {
-  animation-delay: 2.3s;
+  animation-delay: 2s;
 }
 
 .delay5 {
-  animation-delay: 2.9s;
-}
-
-.delay6 {
-  animation-delay: 3s;
+  animation-delay: 2.4s;
 }
 
 #espresso_container {
@@ -333,7 +329,7 @@
 
 .falling {
   animation-name: falling_kf;
-  animation-duration: 5.5s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
   animation-fill-mode: both;

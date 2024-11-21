@@ -41,6 +41,10 @@ p {
   padding-bottom: 5%;
 }
 
+.moodboard {
+  margin: 2% 0 5%;
+}
+
 @media (min-width: 1000px) {
   h1 {
     font-size: 4rem;
@@ -84,5 +88,10 @@ p {
   .heart {
     width: 40%;
     margin-bottom: 8%;
+  }
+
+  .inspiration img,
+  .inspiration2 img {
+    margin: 2% 0 7%;
   }
 }

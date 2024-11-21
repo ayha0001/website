@@ -11,12 +11,12 @@ img {
 }
 
 header {
-  position: relative;
   background-color: #4e5e98;
-  padding: 25px 42px;
+  padding: 25px 30px;
 }
 
 .menu {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,16 +33,110 @@ header {
 .menu a:hover {
   text-decoration: underline;
 }
-
 main {
   background-color: #fdf0e3;
 }
 
-.playbutton {
-  position: absolute;
-  background-color: transparent;
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  font-family: open sans, sans-serif;
+  font-size: 28px;
+  background-color: #4e5e98;
+  gap: 40px;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: white;
   text-decoration: none;
-  padding: 72px 192px;
-  top: 49.3%;
-  left: 8.1%;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media (max-width: 1000px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #4e5e98;
+    position: absolute;
+    top: 7%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+
+  .playbutton {
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 280px 150px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .playbutton {
+    position: absolute;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 72px 192px;
+    top: 49.3%;
+    left: 8.1%;
+  }
 }

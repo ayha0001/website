@@ -42,18 +42,32 @@
     min-width: auto;
   }
 
-  .grid-1-1-1 {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
-  }
-
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
     align-items: end;
     margin-bottom: 8%;
+  }
+
+  .inspiration {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 70px;
+  }
+
+  .inspiration2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    margin: 5% 0;
+  }
+
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 8%;
   }
 }
 
@@ -91,10 +105,21 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 50px;
-    margin-bottom: 15%;
+    padding-bottom: 15%;
   }
 
   .grid_1-1 img {
     max-width: 60%;
+  }
+
+  .inspiration {
+    display: grid;
+    gap: 30px;
+  }
+
+  .grid_1-1-1 {
+    display: grid;
+    gap: 30px;
+    padding: 4% 0 10%;
   }
 }
