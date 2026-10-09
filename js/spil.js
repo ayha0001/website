@@ -124,7 +124,7 @@ function ingredientReset() {
   this.classList.add("pos" + nytRandom(10), "delay" + nytRandom(5), "falling");
 
   //lyt efter klik
-  thist.addEventListener("mousedown", clickIngredient);
+  this.addEventListener("mousedown", clickIngredient);
 
   //reset fald animation
 }
